@@ -85,8 +85,8 @@ html {
 </head>
 
 <body style="font-family: 'Kanit', sans-serif;">
-  <div class="card" style="background-color:#FAB824">
-    <div style="background-color:#FAB824" class="card-body">
+  <div class="card" style="background-color:#FEC200">
+    <div style="background-color:#FEC200" class="card-body">
    
       <h1 class="text-center" style="color:white" >
       <img src="image3.png" alt="Trulli" width="50" height="50">  
