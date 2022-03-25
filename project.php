@@ -61,34 +61,56 @@ if (isset($_POST['sendData'])) {
 <html lang="en">
 
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>วิเคราะห์ความคิดเห็นของคำแล้วแสดงอีโมจิ</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style>
+    body {
+    background-image:url("3.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 0;
+    position: sticky   
+
+}
+html {
+    height: 100%
+}
+  </style>
 </head>
 
-<body>
-  <div class="card">
-    <div class="card-body">
-      <h1 class="text-center">วิเคราะห์ความคิดเห็นของคำแล้วแสดงอีโมจิ</h1>
+<body style="font-family: 'Kanit', sans-serif;">
+  <div class="card" style="background-color:#FAB824">
+    <div style="background-color:#FAB824" class="card-body">
+   
+      <h1 class="text-center" style="color:white" >
+      <img src="image3.png" alt="Trulli" width="50" height="50">  
+      วิเคราะห์ความคิดเห็นของคำแล้วแสดงอีโมจิ
+      <img src="image3.png" alt="Trulli" width="50" height="50">  
+    </h1>
+      
     </div>
   </div>
 
   <div class="container">
     <form method="POST">
-      <div class="form-group">
-        <label class="mt-5" style="margin-bottom:10px;" for="inputData">ช่องกรอกข้อมูลเพื่อทำการวิเคราะห์</label>
+      <div class="form-group" style="color:#FFFFFF">
+        <label class="mt-5" style="margin-bottom:10px;" for="inputData" >ช่องกรอกข้อมูลเพื่อทำการวิเคราะห์</label>
         <input type="text" class="form-control" id="inputData" name="inputData" aria-describedby="emailHelp" placeholder="กรอกข้อมูล">
         <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
       </div>
 
-      <button style="margin-top:20px;" name="sendData" type="submit" class="btn btn-primary">Submit</button>
+      <button style="margin-top:20px;" name="sendData" type="submit" class="btn btn-info" ><p style="color:white; height: 17px;">ประมวลผล</p></button>
     </form>
     <div class="row">
-      <h3 class="text-center">ผลลัพธ์การวิเคราะห์</h3>
-      <hr>
-
+    <hr  style="margin-top: 20px; color:white; border: 10px solid white;">
+      <h3 class="text-center"><p style="color:	#FFFFFF;">ผลลัพธ์การวิเคราะห์</p></h3>
+      
       <div class="col-sm-4">
         <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
           <div class="card-header" class="text-center">
@@ -104,20 +126,13 @@ if (isset($_POST['sendData'])) {
                                   } else {
                                     echo " ";
                                   }
-
                                   ?></p>
           </div>
         </div>
       </div>
-
       <div class="col-sm-4">
         <form method="POST">
-
-
           <button class="btn btn-danger" name="hiddenData" style="width:80%">ล้างข้อมูล</button>
-
-
-
         </form>
       </div>
 
@@ -203,11 +218,14 @@ if (isset($_POST['sendData'])) {
                                 }
                                   ?></p>
           </div>
+          
         </div>
 
       </div>
 
     </div>
+    <hr style="color:white; border: 10px solid white;">
+
 </body>
 
 </html>
