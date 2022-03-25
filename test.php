@@ -133,8 +133,6 @@ if (isset($_POST['sendData'])) {
             <p class="card-text"><?php
               if (isset($_POST['sendData'])) {
                                   foreach ($arr2 as $x => $val) {
-                                    // echo "$x = $val <br>";
-
                                     if ($x == 0) {
                                       echo "😊";
                                     }
