@@ -89,9 +89,14 @@ html {
     <div style="background-color:#FEC200" class="card-body">
    
       <h1 class="text-center" style="color:white" >
+       
+      
+      <marquee direction="left" Scrollamount=12>
+      <img src="image3.png" alt="Trulli" width="50" height="50">   
+      วิเคราะห์ความคิดเห็นของคำ และ ความรู้สึกของอิโมจิ
       <img src="image3.png" alt="Trulli" width="50" height="50">  
-      วิเคราะห์ความคิดเห็นของคำแล้วแสดงอีโมจิ
-      <img src="image3.png" alt="Trulli" width="50" height="50">  
+    </marquee>
+      
     </h1>
       
     </div>
