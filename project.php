@@ -1,8 +1,10 @@
 <?php
-$getScore = '';
 $curl = curl_init();
 if (isset($_POST['sendData'])) {
   $getData = $_POST['inputData'];
+  $getData = preg_replace('/\s+/', '', $getData);
+  //กรอกข้อมูลที่กรอกมาว่า : สวย
+  //$getData = สวย
   curl_setopt_array($curl, array(
     CURLOPT_URL => "https://api.aiforthai.in.th/ssense?text={$getData}",
     CURLOPT_RETURNTRANSFER => true,
@@ -22,7 +24,10 @@ if (isset($_POST['sendData'])) {
     echo "cURL Error #:" . $err;
   } else {
     $arr = json_decode($response);
+    echo var_dump($arr);
   }
+
+  // ------------------------------------------------------------------------------------------------------
   $curl2 = curl_init();
   $emoji = array(
     '😊', '😥', '😡', '😑', '😱', '😨', '😮', '😴', '😝', '😍', '😌', '😑', '😷', '😳', '😵', '💔', '😎', '😭', '😅', '😉', '💜', '😇'
@@ -42,12 +47,10 @@ if (isset($_POST['sendData'])) {
 
   $response2 = curl_exec($curl2);
   $err2 = curl_error($curl2);
-
   curl_close($curl2);
   if ($err2) {
     echo "curl2 Error #: <br>" . $err2;
   } else {
-
     $arr2 = json_decode($response2, true);
   }
 }
@@ -127,7 +130,8 @@ html {
             <!-- <h5 class="card-title">Info card title</h5> -->
             <p class="card-text"><?php
                                   if (isset($_POST['sendData'])) {
-                                    echo " ร้อยละคะแนนความมั่นใจ : {$arr->sentiment->score} % <br> ขั้วอารมณ์ความคิดเห็น : {$arr->sentiment->polarity}  ";
+                                
+                                    echo " ร้อยละคะแนนความมั่นใจ : {$arr->sentiment->score} % <br> ขั้วอารมณ์ความคิดเห็น : {$arr->sentiment->polarity} ";
                                   } else {
                                     echo " ";
                                   }
